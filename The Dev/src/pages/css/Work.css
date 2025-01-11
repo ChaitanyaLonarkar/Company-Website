@@ -1,0 +1,120 @@
+section {
+  margin-top: 60px;
+  background-color: #0263FF;
+}
+
+.work-hero {
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+  height: 80vh;
+}
+
+#hero-title {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.logo {
+  height: 50px; /* Adjust size as needed */
+  margin-right: 40px; /* Adjust spacing between logos */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.our-work-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border-radius: 50px 50px 0 0;
+  padding: 40px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ProjectGrid.css */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 16px;
+  padding-bottom: 250px;
+  align-items: start; /* Align items to start for staggered effect */
+}
+
+.project-card {
+  background-color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  cursor: none;
+}
+
+.project-card:nth-child(odd) {
+  grid-column: 1 / 2;
+}
+
+.project-card:nth-child(even) {
+  grid-column: 2 / 3;
+  top: 50%; /* Adjust value for staggered effect */
+}
+
+.project-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 25px 25px 25px 0px;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.project-tags {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-tag {
+  background-color: transparent; 
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: solid 1px #0263FF;
+  color: #0263FF;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+  }
+  .our-work-container {
+    padding:10px ;
+  }
+
+  .project-card:nth-child(odd),
+  .project-card:nth-child(even) {
+    grid-column: 1 / 2;
+    top: 0;
+  }
+}

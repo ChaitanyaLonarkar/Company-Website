@@ -1,0 +1,79 @@
+.service-capablities {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 4rem;
+}
+
+
+
+.service-capablities .sc-courses{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.service-capablities .sc-courses .sc-service{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 30%;
+    padding: 1.5rem;
+    border: 2px solid #44526c;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+}
+.service-capablities .sc-courses .sc-service:hover{
+
+    background-color: black;
+    scale: 1.01;
+}
+
+
+.sc-name{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+   
+
+@media (max-width: 768px) {
+    .service-capablities {
+        
+        gap: 3rem;
+        padding: 5rem 3rem;
+      }
+       
+   .sc-courses{
+        flex-direction: column;   
+    }
+    .service-capablities .sc-courses .sc-service {
+        gap: 1.7rem;
+        width: 100%;
+        padding: 2rem;}
+}
+@media (max-width: 467px) {
+    .service-capablities {
+        
+        gap: 4rem;
+        padding: 2rem 1.5rem;
+      }
+      .sc-name {
+        font-size: 1.5rem;
+    }
+    .sc-desc{
+        font-size: 0.9rem;
+
+    }
+     
+    .service-capablities .sc-courses .sc-service {
+      
+        gap: 1.7rem;
+        width: 300px;
+        height: 350px;
+        padding: 2rem;}
+}
